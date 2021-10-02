@@ -52,8 +52,11 @@ function MainLayout(props) {
   };
 
   const handleClickItem = (e, item) => {
-    console.log('P.Id: ', item);
-    history.push(`/details/${item}`);
+    history.push({
+      pathname: `/details/${item.id}`,
+      pokemon: item,
+    });
+    // history.push(`/details/${item}`);
   };
 
   const handlePagination = (value) => {
@@ -66,13 +69,13 @@ function MainLayout(props) {
 
   const renderedPokemonList = pokemonDetails.map((pokemon, index) => {
     return (
-      <Grid item xs={12} md={4} lg={3} sm={6}>
+      <Grid item xs={12} md={4} lg={3} sm={6} key={index}>
         <Box
           component='div'
           className={classes.pointer}
-          onClick={(e) => handleClickItem(e, pokemon.id)}
+          onClick={(e) => handleClickItem(e, pokemon)}
         >
-          <PokeMonList pokemon={pokemon} key={index} />
+          <PokeMonList pokemon={pokemon} />
         </Box>
       </Grid>
     );

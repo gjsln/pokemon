@@ -31,3 +31,16 @@ export function fetchDataList(pagination, successCB) {
     })
     .catch(console.log);
 }
+
+export function fetchDetails(id, successCB) {
+  const url = `${api}/${id}`;
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        console.log('Data: ', data);
+        successCB(data);
+      }
+    })
+    .catch(console.log);
+}
