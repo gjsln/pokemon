@@ -68,4 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 # pokemon
+
+# End Result
+
+Not able to achieve the below functionalities/requirements as in the given timeline.
+
+## Page refresh should maintain the sorting and search related data.
+
+## The user should have a link to go back to the previous page.
+
+## Write relevant unit test cases for the UI
